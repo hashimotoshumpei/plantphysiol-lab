@@ -2,6 +2,7 @@
 layout: about
 title: Members
 permalink: /members/
+toc: false
 ---
 
 ## Faculty
