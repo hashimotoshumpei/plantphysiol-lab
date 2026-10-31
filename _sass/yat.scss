@@ -88,3 +88,18 @@ $on-laptop:        800px !default;
   "misc/gitment",
   "misc/click-to-top"
 ;
+
+/* サイト全体のフォント */
+body {
+  font-family: "Hiragino Maru Gothic ProN",
+               "Hiragino Maru Gothic Pro",
+               sans-serif !important;
+}
+
+/* 見出し・ナビゲーションも統一 */
+h1, h2, h3, h4, h5, h6,
+.site-header, .site-nav {
+  font-family: "Hiragino Maru Gothic ProN",
+               "Hiragino Maru Gothic Pro",
+               sans-serif !important;
+}
