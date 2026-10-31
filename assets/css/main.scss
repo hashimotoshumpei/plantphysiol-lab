@@ -53,3 +53,8 @@ $selection-background-color: unquote("{{ site.selection.background_color }}");
 }
 
 @import "yat";
+
+.page-banner-heading,
+.page-banner-subheading {
+  display: none !important;
+}
