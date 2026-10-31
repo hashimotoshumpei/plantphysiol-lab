@@ -1,5 +1,5 @@
 ---
-layout: archives
+layout: default
 title: Members
 permalink: /members/
 toc: false
