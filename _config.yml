@@ -163,7 +163,7 @@ header_pages:
 # Page default value
 defaults:
    #home:
-     heading: ""
+  heading: null
      # subheading: "橋本グループ"
 #     banner: "Your image url"
 
