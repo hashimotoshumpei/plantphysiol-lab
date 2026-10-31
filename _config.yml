@@ -157,7 +157,7 @@ header_pages:
    - members.md
    - archives.html
    - categories.html
-   - tags.html
+   # - tags.html
    - about.md
 
 # Page default value
