@@ -24,7 +24,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: 秋田県立大学 生物資源科学部 植物生理研究室
+title: Laboratory of Plant Physiology
 email: your-email@domain.com
 author: GitHub User
 
