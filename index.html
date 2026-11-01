@@ -19,6 +19,12 @@ banner: "/assets/images/home.jpg"
     イネやソルガムなどの作物を研究材料として、
     基礎研究から農業への応用まで幅広く取り組んでいます。
   </p>
+  <div class="lab-gallery">
+  {% for i in (1..8) %}
+    <img src="{{ '/assets/images/home-' | append: i | append: '.png' | relative_url }}"
+         alt="研究室写真{{ i }}">
+  {% endfor %}
+  </div>
 </section>
 
 <style>
@@ -29,5 +35,41 @@ banner: "/assets/images/home.jpg"
 .page-banner-subheading {
   display: none !important;
 }
+}
+</style>
+
+<style>
+/* 研究室フォトギャラリー */
+.lab-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  width: 100%;
+  margin: 30px 0 50px;
+}
+
+/* 写真のサイズと形状 */
+.lab-gallery img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+  display: block;
+  margin: 0;
+}
+
+/* タブレット */
+@media (max-width: 900px) {
+  .lab-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* スマートフォン */
+@media (max-width: 500px) {
+  .lab-gallery {
+    gap: 8px;
+  }
 }
 </style>
