@@ -7,23 +7,108 @@ toc: false
 
 <section style="max-width: 900px; margin: 0 auto; padding: 0;">
 
-  <h2>教員</h2>
+<style>
+/* 教員 */
+.faculty-photo {
+  width: 200px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-top: 15px;
+}
 
-  <h3>橋本　舜平</h3>
-  <p>助教</p>
+/* 学生：2列表示 */
+.student-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 20px;
+}
 
-  <p>
-    Research interests: Plant physiology and genetics
-  </p>
+.student-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
 
-  <hr style="border: none; border-top: 1px solid #ccc; margin: 40px 0;">
+.student-photo {
+  width: 130px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 5px;
+}
 
-  <h2>Students</h2>
+.student-info {
+  flex: 1;
+}
 
-  <h3>Graduate Students</h3>
-  <p>Coming soon.</p>
+/* スマートフォンでは1列 */
+@media (max-width: 600px) {
+  .student-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
 
-  <h3>Undergraduate Students</h3>
-  <p>Coming soon.</p>
+<h2>教員</h2>
 
-</section>
+<h3>橋本 舜平</h3>
+<p>助教</p>
+
+<img src="{{ '/assets/images/hashimoto.jpg' | relative_url }}"
+     class="faculty-photo"
+     alt="橋本 舜平">
+
+<p>Research interests: Plant physiology and genetics</p>
+
+<hr>
+
+<h2>Students</h2>
+
+<h3>Graduate Students</h3>
+
+<div class="student-grid">
+
+  <div class="student-card">
+    <img src="{{ '/assets/images/student1.jpg' | relative_url }}"
+         class="student-photo">
+    <div class="student-info">
+      <h4>Student 1</h4>
+      <p>Master's student</p>
+    </div>
+  </div>
+
+  <div class="student-card">
+    <img src="{{ '/assets/images/student2.jpg' | relative_url }}"
+         class="student-photo">
+    <div class="student-info">
+      <h4>Student 2</h4>
+      <p>Master's student</p>
+    </div>
+  </div>
+
+</div>
+
+<h3>Undergraduate Students</h3>
+
+<div class="student-grid">
+
+  <div class="student-card">
+    <img src="{{ '/assets/images/student3.jpg' | relative_url }}"
+         class="student-photo">
+    <div class="student-info">
+      <h4>Student 3</h4>
+      <p>Undergraduate student</p>
+    </div>
+  </div>
+
+  <div class="student-card">
+    <img src="{{ '/assets/images/student4.jpg' | relative_url }}"
+         class="student-photo">
+    <div class="student-info">
+      <h4>Student 4</h4>
+      <p>Undergraduate student</p>
+    </div>
+  </div>
+
+</div>
