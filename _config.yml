@@ -156,8 +156,9 @@ header_pages:
    - index.html
    - members.html
    - archives.html
-   - categories.html
+   # - categories.html
    # - tags.html
+   - publications.html
    - about.html
 
 # Page default value
