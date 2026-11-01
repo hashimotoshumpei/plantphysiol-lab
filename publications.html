@@ -6,14 +6,13 @@ permalink: /publications/
 ---
 
 <style>
-/* Publications page */
 .publications {
   max-width: 1100px;
   margin: 0 auto;
   padding: 20px 0 60px;
 }
 
-/* Year headings */
+/* 年の見出し */
 .publications .publication-year {
   font-size: 26px;
   font-weight: 600;
@@ -22,7 +21,7 @@ permalink: /publications/
   border-bottom: 1px solid #ddd;
 }
 
-/* Publication list */
+/* 論文リスト */
 .publication-list {
   list-style: none;
   padding: 0;
@@ -30,12 +29,28 @@ permalink: /publications/
 }
 
 .publication-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
   margin: 0 0 28px;
-  padding: 0;
   line-height: 1.7;
 }
 
-/* Paper title */
+/* 論文番号 */
+.publication-number {
+  flex: 0 0 30px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #666;
+}
+
+/* 論文情報 */
+.publication-content {
+  flex: 1;
+  min-width: 0;
+}
+
+/* タイトル */
 .publication-title {
   font-size: 17px;
   font-weight: 600;
@@ -43,18 +58,24 @@ permalink: /publications/
   margin-bottom: 5px;
 }
 
-/* Authors */
+/* 著者 */
 .publication-authors {
   font-size: 15px;
   margin-bottom: 4px;
 }
 
-/* Journal */
+/* 雑誌情報 */
 .publication-journal {
   font-size: 15px;
 }
 
-/* DOI links */
+/* 雑誌名：太字＋イタリック */
+.publication-journal .journal-name {
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* DOI */
 .publication-journal a {
   color: #3273dc;
   text-decoration: none;
@@ -65,14 +86,14 @@ permalink: /publications/
   text-decoration: underline;
 }
 
-/* Publication status */
+/* 公開状態 */
 .pub-status {
   font-size: 13px;
   color: #888;
   margin-left: 5px;
 }
 
-/* Mobile */
+/* スマートフォン */
 @media (max-width: 600px) {
   .publications .publication-year {
     font-size: 23px;
@@ -86,220 +107,247 @@ permalink: /publications/
   .publication-journal {
     font-size: 14px;
   }
+
+  .publication-number {
+    flex-basis: 25px;
+    font-size: 15px;
+  }
+
+  .publication-list li {
+    gap: 10px;
+  }
 }
 </style>
 
 <div class="publications">
 
 <h2 class="publication-year">2026</h2>
-
 <ul class="publication-list">
 
 <li>
-  <div class="publication-title">
-    Loss of starch synthase IIa alleviates the negative impact
-    of high temperature on rice starch during grain filling
-  </div>
-  <div class="publication-authors">
-    Hashimoto S, Matsushima R, Oitome NF, Hosaka Y,
-    Miura S, Crofts N, Yamamoto T, Fujita N
-  </div>
-  <div class="publication-journal">
-    <em>bioRxiv</em> (2026).
-    <span class="pub-status">[Preprint]</span>
-    <a href="https://doi.org/10.64898/2026.09.28.754565"
-       target="_blank" rel="noopener noreferrer">[DOI]</a>
-  </div>
-</li>
-
-<li>
-  <div class="publication-title">
-    geneSTRUCTURE: A modern platform for visualization
-    of gene structures
-  </div>
-  <div class="publication-authors">
-    Hashimoto S, Yamada K, Izawa T
-  </div>
-  <div class="publication-journal">
-    <em>Breeding Science</em> (2026).
-    <span class="pub-status">[Advance online publication]</span>
-    <a href="https://doi.org/10.1270/jsbbs.26019"
-       target="_blank" rel="noopener noreferrer">[DOI]</a>
+  <span class="publication-number">10.</span>
+  <div class="publication-content">
+    <div class="publication-title">
+      Loss of starch synthase IIa alleviates the negative impact
+      of high temperature on rice starch during grain filling
+    </div>
+    <div class="publication-authors">
+      <strong>Hashimoto S</strong>, Matsushima R, Oitome NF,
+      Hosaka Y, Miura S, Crofts N, Yamamoto T, Fujita N
+    </div>
+    <div class="publication-journal">
+      <span class="journal-name">bioRxiv</span> (2026).
+      <span class="pub-status">[Preprint]</span>
+      <a href="https://doi.org/10.64898/2026.09.28.754565"
+         target="_blank" rel="noopener noreferrer">[DOI]</a>
+    </div>
   </div>
 </li>
 
 <li>
-  <div class="publication-title">
-    3D-Manhattan: An interactive visualization tool
-    for multiple GWAS results
-  </div>
-  <div class="publication-authors">
-    Hashimoto S
-  </div>
-  <div class="publication-journal">
-    <em>Breeding Science</em>
-    <strong>76</strong>(4):393–399 (2026).
-    <a href="https://doi.org/10.1270/jsbbs.26018"
-       target="_blank" rel="noopener noreferrer">[DOI]</a>
+  <span class="publication-number">9.</span>
+  <div class="publication-content">
+    <div class="publication-title">
+      geneSTRUCTURE: A modern platform for visualization
+      of gene structures
+    </div>
+    <div class="publication-authors">
+      <strong>Hashimoto S</strong>, Yamada K, Izawa T
+    </div>
+    <div class="publication-journal">
+      <span class="journal-name">Breeding Science</span> (2026).
+      <span class="pub-status">[Advance online publication]</span>
+      <a href="https://doi.org/10.1270/jsbbs.26019"
+         target="_blank" rel="noopener noreferrer">[DOI]</a>
+    </div>
   </div>
 </li>
 
 <li>
-  <div class="publication-title">
-    Managing water on plant leaf surfaces:
-    Roles and regulation of hydrophobicity
+  <span class="publication-number">8.</span>
+  <div class="publication-content">
+    <div class="publication-title">
+      3D-Manhattan: An interactive visualization tool
+      for multiple GWAS results
+    </div>
+    <div class="publication-authors">
+      <strong>Hashimoto S</strong>
+    </div>
+    <div class="publication-journal">
+      <span class="journal-name">Breeding Science</span>
+      <strong>76</strong>(4):393–399 (2026).
+      <a href="https://doi.org/10.1270/jsbbs.26018"
+         target="_blank" rel="noopener noreferrer">[DOI]</a>
+    </div>
   </div>
-  <div class="publication-authors">
-    Hashimoto S, Itoh J
-  </div>
-  <div class="publication-journal">
-    <em>Journal of Experimental Botany</em>
-    <strong>77</strong>(20):6869–6879 (2026).
-    <a href="https://doi.org/10.1093/jxb/erag112"
-       target="_blank" rel="noopener noreferrer">[DOI]</a>
+</li>
+
+<li>
+  <span class="publication-number">7.</span>
+  <div class="publication-content">
+    <div class="publication-title">
+      Managing water on plant leaf surfaces:
+      Roles and regulation of hydrophobicity
+    </div>
+    <div class="publication-authors">
+      <strong>Hashimoto S</strong>, Itoh J
+    </div>
+    <div class="publication-journal">
+      <span class="journal-name">Journal of Experimental Botany</span>
+      <strong>77</strong>(20):6869–6879 (2026).
+      <a href="https://doi.org/10.1093/jxb/erag112"
+         target="_blank" rel="noopener noreferrer">[DOI]</a>
+    </div>
   </div>
 </li>
 
 </ul>
-
 
 <h2 class="publication-year">2025</h2>
-
 <ul class="publication-list">
 
 <li>
-  <div class="publication-title">
-    Six-gene model underlying heterosis for culm length
-    and flowering date in sorghum
-    (Sorghum bicolor (L.) Moench)
-  </div>
-  <div class="publication-authors">
-    Okada S, Hashimoto S, Kikuchi T, Araki-Nakamura S,
-    Ohmae-Shinohara K, Kasuga S, Sazuka T
-  </div>
-  <div class="publication-journal">
-    <em>Scientific Reports</em>
-    <strong>15</strong>:39880 (2025).
-    <a href="https://doi.org/10.1038/s41598-025-23675-8"
-       target="_blank" rel="noopener noreferrer">[DOI]</a>
+  <span class="publication-number">6.</span>
+  <div class="publication-content">
+    <div class="publication-title">
+      Six-gene model underlying heterosis for culm length
+      and flowering date in sorghum
+      (Sorghum bicolor (L.) Moench)
+    </div>
+    <div class="publication-authors">
+      Okada S, <strong>Hashimoto S</strong>, Kikuchi T,
+      Araki-Nakamura S, Ohmae-Shinohara K, Kasuga S, Sazuka T
+    </div>
+    <div class="publication-journal">
+      <span class="journal-name">Scientific Reports</span>
+      <strong>15</strong>:39880 (2025).
+      <a href="https://doi.org/10.1038/s41598-025-23675-8"
+         target="_blank" rel="noopener noreferrer">[DOI]</a>
+    </div>
   </div>
 </li>
 
 </ul>
-
 
 <h2 class="publication-year">2024</h2>
-
 <ul class="publication-list">
 
 <li>
-  <div class="publication-title">
-    GenoSee: a novel visualization tool for graphical genotypes
-  </div>
-  <div class="publication-authors">
-    Hashimoto S
-  </div>
-  <div class="publication-journal">
-    <em>Breeding Science</em>
-    <strong>74</strong>(5):454–461 (2024).
-    <a href="https://doi.org/10.1270/jsbbs.24041"
-       target="_blank" rel="noopener noreferrer">[DOI]</a>
+  <span class="publication-number">5.</span>
+  <div class="publication-content">
+    <div class="publication-title">
+      GenoSee: a novel visualization tool for graphical genotypes
+    </div>
+    <div class="publication-authors">
+      <strong>Hashimoto S</strong>
+    </div>
+    <div class="publication-journal">
+      <span class="journal-name">Breeding Science</span>
+      <strong>74</strong>(5):454–461 (2024).
+      <a href="https://doi.org/10.1270/jsbbs.24041"
+         target="_blank" rel="noopener noreferrer">[DOI]</a>
+    </div>
   </div>
 </li>
 
 </ul>
-
 
 <h2 class="publication-year">2023</h2>
-
 <ul class="publication-list">
 
 <li>
-  <div class="publication-title">
-    An analysis of sugary endosperm in sorghum:
-    Characterization of mutant phenotypes depending on
-    alleles of the corresponding starch debranching enzyme
-  </div>
-  <div class="publication-authors">
-    Hashimoto S, Okada S, Araki-Nakamura S,
-    Ohmae-Shinohara K, Miura K, Kawaguchi H,
-    Ogino C, Kasuga S, Sazuka T
-  </div>
-  <div class="publication-journal">
-    <em>Frontiers in Plant Science</em>
-    <strong>14</strong>:1114935 (2023).
-    <a href="https://doi.org/10.3389/fpls.2023.1114935"
-       target="_blank" rel="noopener noreferrer">[DOI]</a>
+  <span class="publication-number">4.</span>
+  <div class="publication-content">
+    <div class="publication-title">
+      An analysis of sugary endosperm in sorghum:
+      Characterization of mutant phenotypes depending on
+      alleles of the corresponding starch debranching enzyme
+    </div>
+    <div class="publication-authors">
+      <strong>Hashimoto S</strong>, Okada S,
+      Araki-Nakamura S, Ohmae-Shinohara K, Miura K,
+      Kawaguchi H, Ogino C, Kasuga S, Sazuka T
+    </div>
+    <div class="publication-journal">
+      <span class="journal-name">Frontiers in Plant Science</span>
+      <strong>14</strong>:1114935 (2023).
+      <a href="https://doi.org/10.3389/fpls.2023.1114935"
+         target="_blank" rel="noopener noreferrer">[DOI]</a>
+    </div>
   </div>
 </li>
 
 </ul>
-
 
 <h2 class="publication-year">2021</h2>
-
 <ul class="publication-list">
 
 <li>
-  <div class="publication-title">
-    Chemical and microbiological evaluation of
-    vermicompost made from school food waste in Japan
-  </div>
-  <div class="publication-authors">
-    Hashimoto S, Furuya M, You X, Wanibuchi G,
-    Tokumoto H, Tojo M, Shiragaki K
-  </div>
-  <div class="publication-journal">
-    <em>Japan Agricultural Research Quarterly</em>
-    <strong>55</strong>(3):225–232 (2021).
-    <a href="https://doi.org/10.6090/jarq.55.225"
-       target="_blank" rel="noopener noreferrer">[DOI]</a>
+  <span class="publication-number">3.</span>
+  <div class="publication-content">
+    <div class="publication-title">
+      Chemical and microbiological evaluation of
+      vermicompost made from school food waste in Japan
+    </div>
+    <div class="publication-authors">
+      <strong>Hashimoto S</strong>, Furuya M, You X,
+      Wanibuchi G, Tokumoto H, Tojo M, Shiragaki K
+    </div>
+    <div class="publication-journal">
+      <span class="journal-name">Japan Agricultural Research Quarterly</span>
+      <strong>55</strong>(3):225–232 (2021).
+      <a href="https://doi.org/10.6090/jarq.55.225"
+         target="_blank" rel="noopener noreferrer">[DOI]</a>
+    </div>
   </div>
 </li>
 
 <li>
-  <div class="publication-title">
-    The dominance model for heterosis explains
-    culm length genetics in a hybrid sorghum variety
-  </div>
-  <div class="publication-authors">
-    Hashimoto S, Wake T, Nakamura H, Minamiyama M,
-    Araki-Nakamura S, Ohmae-Shinohara K,
-    Koketsu E, Okamura S, Miura K, Kawaguchi H,
-    Kasuga S, Sazuka T
-  </div>
-  <div class="publication-journal">
-    <em>Scientific Reports</em>
-    <strong>11</strong>:4532 (2021).
-    <a href="https://doi.org/10.1038/s41598-021-84020-3"
-       target="_blank" rel="noopener noreferrer">[DOI]</a>
+  <span class="publication-number">2.</span>
+  <div class="publication-content">
+    <div class="publication-title">
+      The dominance model for heterosis explains
+      culm length genetics in a hybrid sorghum variety
+    </div>
+    <div class="publication-authors">
+      <strong>Hashimoto S</strong>, Wake T, Nakamura H,
+      Minamiyama M, Araki-Nakamura S, Ohmae-Shinohara K,
+      Koketsu E, Okamura S, Miura K, Kawaguchi H,
+      Kasuga S, Sazuka T
+    </div>
+    <div class="publication-journal">
+      <span class="journal-name">Scientific Reports</span>
+      <strong>11</strong>:4532 (2021).
+      <a href="https://doi.org/10.1038/s41598-021-84020-3"
+         target="_blank" rel="noopener noreferrer">[DOI]</a>
+    </div>
   </div>
 </li>
 
 </ul>
 
-
 <h2 class="publication-year">2019</h2>
-
 <ul class="publication-list">
 
 <li>
-  <div class="publication-title">
-    Morphological changes during juvenile-to-adult
-    phase transition in sorghum
-  </div>
-  <div class="publication-authors">
-    Hashimoto S, Tezuka T, Yokoi S
-  </div>
-  <div class="publication-journal">
-    <em>Planta</em>
-    <strong>250</strong>(5):1557–1566 (2019).
-    <a href="https://doi.org/10.1007/s00425-019-03251-x"
-       target="_blank" rel="noopener noreferrer">[DOI]</a>
+  <span class="publication-number">1.</span>
+  <div class="publication-content">
+    <div class="publication-title">
+      Morphological changes during juvenile-to-adult
+      phase transition in sorghum
+    </div>
+    <div class="publication-authors">
+      <strong>Hashimoto S</strong>, Tezuka T, Yokoi S
+    </div>
+    <div class="publication-journal">
+      <span class="journal-name">Planta</span>
+      <strong>250</strong>(5):1557–1566 (2019).
+      <a href="https://doi.org/10.1007/s00425-019-03251-x"
+         target="_blank" rel="noopener noreferrer">[DOI]</a>
+    </div>
   </div>
 </li>
 
 </ul>
 
 </div>
-
