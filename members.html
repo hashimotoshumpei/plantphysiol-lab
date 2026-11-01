@@ -8,55 +8,78 @@ toc: false
 <section style="max-width: 900px; margin: 0 auto; padding: 0;">
 
 <style>
-/* 教員 */
-.faculty-photo {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 5px;
-  margin-top: 15px;
-}
-
-/* 学生：2列表示 */
-.student-grid {
+/* 教員・学生共通の2列レイアウト */
+.member-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 30px;
-  margin-top: 20px;
+  margin: 25px 0 40px;
 }
 
-.student-card {
+/* 個人ごとの配置 */
+.member-card {
   display: flex;
   align-items: flex-start;
   gap: 20px;
 }
 
-.student-photo {
-  width: 150px;
-  height: 150px;
+/* 写真 */
+.member-photo {
+  width: 160px;
+  height: 160px;
   object-fit: cover;
-  border-radius: 5px;
+  border-radius: 50%;
+  flex-shrink: 0;
 }
 
-.student-info {
+/* 氏名・役職・研究分野 */
+.member-info {
   flex: 1;
+  min-width: 0;
+}
+
+.member-info h4 {
+  margin: 0 0 12px;
+  font-size: 20px;
+}
+
+.member-info p {
+  margin: 0 0 12px;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 /* スマートフォンでは1列 */
-@media (max-width: 600px) {
-  .student-grid {
+@media (max-width: 700px) {
+  .member-grid {
     grid-template-columns: 1fr;
+  }
+
+  .member-photo {
+    width: 120px;
+    height: 120px;
   }
 }
 </style>
 
 <h2>教員</h2>
-<img src="{{ '/assets/images/hashimoto.jpg' | relative_url }}"
-     class="faculty-photo"
-     alt="橋本 舜平">
-<h3>橋本 舜平</h3>
-<p>助教</p>
-<p>Research interests: Plant physiology and genetics</p>
+
+<div class="member-grid">
+
+  <div class="member-card">
+    <img src="{{ '/assets/images/hashimoto.png' | relative_url }}"
+         class="member-photo"
+         alt="橋本 舜平">
+
+    <div class="member-info">
+      <h4>橋本 舜平</h4>
+      <p>助教</p>
+      <p>Research interests:<br>
+         Plant physiology and genetics</p>
+    </div>
+  </div>
+
+</div>
 
 <hr>
 
@@ -64,25 +87,28 @@ toc: false
 
 <h3>学部生</h3>
 
-<div class="student-grid">
+<div class="member-grid">
 
-  <div class="student-card">
-    <img src="{{ '/assets/images/student.jpg' | relative_url }}"
-         class="student-photo">
-    <div class="student-info">
+  <div class="member-card">
+    <img src="{{ '/assets/images/student.png' | relative_url }}"
+         class="member-photo"
+         alt="Student 1">
+
+    <div class="member-info">
       <h4>Student 1</h4>
-      <p>Master's student</p>
+      <p>Undergraduate student</p>
     </div>
   </div>
 
-  <div class="student-card">
-    <img src="{{ '/assets/images/student.jpg' | relative_url }}"
-         class="student-photo">
-    <div class="student-info">
+  <div class="member-card">
+    <img src="{{ '/assets/images/student.png' | relative_url }}"
+         class="member-photo"
+         alt="Student 2">
+
+    <div class="member-info">
       <h4>Student 2</h4>
-      <p>Master's student</p>
+      <p>Undergraduate student</p>
     </div>
   </div>
 
 </div>
-
