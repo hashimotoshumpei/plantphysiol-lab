@@ -8,8 +8,10 @@ banner: "/assets/images/home.jpg"
 ---
 <section style="max-width: 900px; margin: 0 auto; padding: 0 0px;">
   <h3>秋田県立大学 生物資源科学部 生物生産科学科</h3>
-  <h1>植 物 生 理 研 究 室</h1>
-  <p>橋本グループ</p>
+  <div class="lab-title">
+    <span class="lab-title-main">植物生理研究室</span>
+    <span class="lab-title-sub">橋本グループ</span>
+  </div>
 
 
   <p>
@@ -57,6 +59,26 @@ banner: "/assets/images/home.jpg"
   border-radius: 5px;
   display: block;
   margin: 0;
+}
+
+.lab-title {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.lab-title-main {
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.lab-title-sub {
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: normal;
 }
 
 /* タブレット */
